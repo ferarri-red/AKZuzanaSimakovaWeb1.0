@@ -1,0 +1,540 @@
+/** Fonts (Kormelink) */
+@font-face {
+  font-family: 'Kormelink Roman';
+  src: url('fonts/WT_Kormelink_Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kormelink Italic';
+  src: url('fonts/WT_Kormelink_Italic.woff') format('woff');
+}
+
+@font-feature-values 'Kormelink Italic' {
+  @stylistic {
+      salt: 1;
+  }
+}
+
+/** Style */
+/** Menu Header / Nav */ 
+.menu {
+  text-align: left;
+  z-index: 1000;
+  position: fixed;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.menu nav {
+padding-top: 1em;
+}
+
+.it-stylistic {
+font-family: 'Kormelink Italic';
+font-variant-alternates: stylistic(salt);
+}
+
+.it-stylistic2 {
+text-align: left;
+font-family: 'Kormelink Italic';
+font-variant-alternates: stylistic(salt);
+}
+
+.it-stylistic-headline {
+font-family: 'Kormelink Italic';
+font-variant-alternates: stylistic(salt);
+text-align: center;
+width: 65vw;
+margin: 15px auto 15px 280px;
+}
+
+/** Body obsah */ 
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Kormelink Roman';
+color: #09642e;
+padding: 2em;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+h1 {
+font-size: 1.5em;
+line-height: 1em;
+margin-bottom: 10px;
+letter-spacing: -0.01em;
+font-weight: normal;
+/** -webkit-font-smoothing: antialiased; (zamezí tučný kresbě písma)*/
+}
+
+h2 {
+font-size: 1em;
+line-height: 1.2em;
+letter-spacing: -0.001em;
+font-weight: normal;
+/** -webkit-font-smoothing: antialiased; (zamezí tučný kresbě písma)*/ 
+}
+
+p {
+line-height: 1.5em;
+}
+
+a {
+text-decoration: none;
+color: #09642e;
+transition: color 0.5s;
+}
+
+a:hover {
+color: #bbbbbb;
+}
+
+/** Text 'O nás' + fotka */ 
+.onas {
+text-align: center;
+margin-top: 50px;
+}
+
+.onas-text {
+text-align: left;
+width: 65vw;
+margin: 0 auto 0 280px;
+}
+
+.profile-container {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+width: 65vw;
+margin: 50px auto 0 280px;
+}
+
+.profile-pic {
+width: auto;
+max-width: 300px;
+height: auto;
+margin-right: 2vw;
+}
+
+.mgrzs {
+text-align: left;
+margin-top: -25px;
+}
+
+/** Služby, text + buttons */ 
+#sluzby {
+margin: 100px;
+}
+
+.sluzby-text {
+text-align: center;
+width: 65vw;
+margin: 0 auto;
+max-width: 570px;
+}
+
+.sluzba-text {
+text-align: left;
+width: 65vw;
+margin: 0 auto 65px 280px;
+}
+
+.sluzby-buttons {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding: 0;
+list-style: none;
+}
+
+.sluzby-buttons li {
+width: calc(33.33% - 20px);
+max-width: 350px;
+height: 100px;
+padding: 25px;
+margin: 10px;
+background-color: transparent;
+border: 0.08em solid #09642e;
+border-radius: 50px;
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease;
+color: #09642e;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+}
+
+.sluzby-buttons li:hover {
+background-color: #09642e;
+color: #ffffff;
+}
+
+.sluzby-buttons li a {
+text-decoration: none;
+color: inherit;
+display: block;
+width: 350px;
+height: 100px; 
+padding-top: 40px; /** Centrování textu v buttonech 1 řádek */
+box-sizing: border-box;
+}
+
+.sluzby-buttons li a.two-lines {
+padding-top: 35px; /** Centrování textu v buttonech 2 řádky */
+}
+
+.sluzby-buttons li.inverted {
+background-color: #09642e;
+color: #ffffff;
+}
+
+.sluzby-buttons li.inverted:hover {
+background-color: transparent;
+color: #09642e;
+border: 0.08em solid #09642e;
+}
+
+/** Kontaktní formulář */ 
+#contact-form {
+background-color: #09642e;
+color: white;
+width: 100vw;
+padding: 20px 0;
+text-align: center;
+box-sizing: border-box;
+margin-left: calc(-50vw + 50%);
+display: flex;
+flex-direction: column;
+align-items: center;  
+}
+
+.form-contact {
+color: white;
+line-height: 1.2em;
+}
+
+#contact-form h2 {
+border-bottom: 0.08em solid white;
+padding-bottom: 2em;
+width: 40%;
+margin: 0 auto;
+}
+
+#contact-form h1 {
+padding: 1em 0 1em 0;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="number"],
+#contact-form textarea {
+  width: 75vw;
+  max-width: 400px;
+  padding: 10px 15px;
+  margin: 0.5em auto;
+  border-radius: 50px;
+  border: 0.08em solid white;
+  background-color: transparent;
+  color: white;
+  font-family: 'Kormelink Roman';
+  font-size: 1em;
+  box-sizing: border-box;
+  display: block;
+}
+
+::placeholder {
+color: #bbbbbb;
+}
+
+#contact-form textarea {
+border-radius: 25px;
+height: 150px;
+}
+
+#contact-form button[type="submit"] {
+padding: 10px 25px;
+background-color: transparent;
+border: 0.08em solid white;
+border-radius: 50px;
+color: white;
+font-family: 'Kormelink Roman';
+font-size: 1em;
+margin: 1.5em auto;
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+background-color: white;
+color: #09642e;
+}
+
+input:focus, textarea:focus, button:focus {
+box-shadow: 0 0 0 0.08em #bbbbbb;
+outline: none;
+}
+
+/* Odstranění ikonek automatického vyplňování */
+/* Default */
+input::-webkit-autofill,
+input::-webkit-credentials-auto-fill-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Safari */
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  right: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder, textarea::placeholder {
+color: #bbbbbb;
+opacity: 1;
+transition: opacity 0.3s ease;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+opacity: 0;
+}
+
+/** Footer */ 
+footer {
+margin-top: auto;
+padding: 2.5em 0 2.5em 0;
+}
+
+.footer-column {
+width: auto;
+display: inline-block;
+vertical-align: top;
+text-align: left;
+padding: 0;
+box-sizing: border-box;
+padding-right: 1.5em;
+}
+
+.cisla {
+  font-variant-numeric: oldstyle-nums;
+  display: inline;
+}
+
+/** Cookies pop-up */
+.cookie-banner {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #09642e;
+color: #fff;
+padding: 15px 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+box-sizing: border-box;
+}
+
+.cookie-text {
+margin: 0;
+flex: 1 1 300px;
+font-size: 1em;
+line-height: 1.5em;
+letter-spacing: -0.001em;
+font-weight: normal;
+}
+
+.cookie-actions {
+display: flex;
+align-items: center;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.cookie-accept {
+color: white;
+border: none;
+border: 0.08em solid white;
+border-radius: 50px;
+padding: 10px 20px;
+cursor: pointer;
+font-size: 1em;
+transition: background-color 0.3s ease, color 0.3s ease;
+font-family: 'Kormelink Roman';
+background-color: transparent;
+flex: 0 1 auto;
+}
+
+.cookie-accept:hover {
+background-color: white;
+color: #09642e;
+}
+
+.cookie-info {
+color: #fff;
+text-decoration: underline;
+font-size: 1em;
+flex: 0 1 auto;
+}
+
+.cookie-info:hover {
+color: #ddd;
+}
+
+#footer-linka {
+border-top: 0.08em solid #09642e;
+padding: 0.5em 0 0.5em 0;
+}
+
+
+
+/** Responzivita */
+
+@media only screen and (max-width: 1024px) {
+.menu {
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+}
+
+/* Mobile Styles */
+
+@media (max-width: 767px) {
+
+.it-stylistic-headline {
+  width: 85vw;
+  margin: 10px auto;
+}
+
+.onas-text, .profile-container {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.profile-container {
+  margin-top: 65px;
+  flex-direction: column;
+}
+
+.mgrzs {
+  text-align: center;
+  padding: 20px;
+}
+
+.sluzba-text {
+  width: 85vw;
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
+
+.profile-pic {
+  width: 80%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+#sluzby {
+  margin: 50px auto;
+  width: 85vw;
+}
+
+.sluzby-buttons li {
+  width: 85vw;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="number"],
+#contact-form textarea {
+  width: 65vw;
+  max-width: 100%;
+}
+
+#contact-form h2 {
+  width: 80%;
+}
+}
+
+/* Tablet Styles */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+.it-stylistic-headline {
+  width: 80vw;
+  margin: 10px auto;
+}
+
+.onas-text, .profile-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.profile-container {
+  margin-top: 65px;
+  
+}
+
+.mgrzs {
+  text-align: left;
+  margin-top: -50px;
+  padding: 10px;
+}
+
+.sluzba-text {
+  width: 80vw;
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
+
+.profile-pic {
+  width: 40%;
+  max-width: 250px;
+  margin-right: 2vw;
+}
+
+@media (max-width: 1024px) {
+  .sluzby-buttons li {
+    width: 45%;
+  }
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="number"],
+#contact-form textarea {
+  width: 80vw;
+  max-width: 400px;
+}
+
+#contact-form h2 {
+  width: 60%;
+}
+}
